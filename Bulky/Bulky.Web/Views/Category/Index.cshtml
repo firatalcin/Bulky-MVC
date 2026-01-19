@@ -1,4 +1,6 @@
-﻿
+﻿@model List<Category>
+
+
 @{
     ViewData["Title"] = "Index";
 }
@@ -7,12 +9,27 @@
 
 
 <table class="table table-bordered table-striped">
-    <tr>
-        <th>
-            Category Name
-        </th>
-        <th>
-            Display Order
-        </th>
-    </tr>
+    <thead>
+        <tr>
+            <th>
+                Category Name
+            </th>
+            <th>
+                Display Order
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var category in Model.OrderBy(u=>u.DisplayOrder))
+        {
+            <tr>
+                <td>
+                    @category.Name
+                </td>
+                <td>
+                    @category.DisplayOrder
+                </td>
+            </tr>
+		}
+    </tbody>
 </table>
