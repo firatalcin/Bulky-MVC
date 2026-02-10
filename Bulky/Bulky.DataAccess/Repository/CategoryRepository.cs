@@ -1,9 +1,6 @@
 ﻿using Bulky.DataAccess.Data;
 using Bulky.DataAccess.Repository.IRepository;
 using Bulky.Models.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Bulky.DataAccess.Repository
 {
@@ -13,11 +10,6 @@ namespace Bulky.DataAccess.Repository
         public CategoryRepository(ApplicationDbContext db) : base(db)
         {
             _db = db;
-        }
-
-        public void Save()
-        {
-            _db.SaveChanges();
         }
 
         public void Update(Category obj)
