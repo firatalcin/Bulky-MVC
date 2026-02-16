@@ -19,7 +19,7 @@ namespace Bulky.Models.Models
         [Required]
         [Display(Name = "List Price")]
         [Range(1, 1000)]
-        public double LastPrice { get; set; }
+        public double ListPrice { get; set; }
 
         [Required]
         [Display(Name = "Price for 1-50")]
